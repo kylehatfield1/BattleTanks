@@ -40,6 +40,8 @@
 *.sdf
 *.VC.opendb
 
+BattleTanks/Content/StarterContent/
+
 # Precompiled Assets
 SourceArt/**/*.png
 SourceArt/**/*.tga
