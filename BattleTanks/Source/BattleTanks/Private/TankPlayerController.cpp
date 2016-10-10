@@ -3,8 +3,6 @@
 #include "BattleTanks.h"
 #include "TankPlayerController.h"
 
-
-
 void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
@@ -20,7 +18,19 @@ void ATankPlayerController::BeginPlay()
 	}	
 }
 
+void ATankPlayerController::Tick(float DeltaTime)
+{
+	Super::Tick( DeltaTime );
+	AimTowardCrossHair();
+	UE_LOG(LogTemp, Warning, TEXT("TPC is ticking"));
+}
+
 ATank* ATankPlayerController::GetControlledTank() const
 {
 	return Cast<ATank>(GetPawn());
+}
+
+void ATankPlayerController::AimTowardCrossHair()
+{
+	if (!GetControlledTank()) { return; }
 }
