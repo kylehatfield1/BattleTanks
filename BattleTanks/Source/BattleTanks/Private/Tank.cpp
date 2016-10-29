@@ -6,6 +6,11 @@
 #include "TankAimingComponent.h"
 #include "Tank.h"
 
+void ATank::BeginPlay()
+{
+	Super::BeginPlay();
+	TankAimingComponent = FindComponentByClass<UTankAimingComponent>();
+}
 
 // Sets default values
 ATank::ATank()
