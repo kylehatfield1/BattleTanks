@@ -5,8 +5,6 @@
 #include "AIController.h"
 #include "TankAIController.generated.h"
 
-class ATank;
-
 /**
  * 
  */
@@ -19,7 +17,7 @@ private:
 
 	void BeginPlay() override;	
 
-	virtual void Tick(float DealTime) override;
+	virtual void Tick(float DeltaTime) override;
 
 	float AcceptanceRadius = 3000;
 };
